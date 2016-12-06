@@ -37,15 +37,15 @@
         				{},
         				function(data) {
         					/* if (data == 1) {
-        						document.getElementById("span1").innerHTML = "<font color='red'>用户名已经存在</font>";
+        						document.getElementById("span1").innerHTML = "&lt;font color='red'>用户名已经存在&lt;/font>";
         						$("#username").val("");
         						$("#username").focus();
         						$(".submit").unbind("click",
         								function(event){
-        							
+
         						});
         					} else {
-        						document.getElementById("span1").innerHTML = "<font color='green'>用户名不存在</font>";
+        						document.getElementById("span1").innerHTML = "&lt;font color='green'>用户名不存在&lt;/font>";
         					} */
         			});
         	});

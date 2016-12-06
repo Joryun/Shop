@@ -5,6 +5,7 @@
       <file url="file://$PROJECT_DIR$/src/com/shop/service/impl/AdminServiceImpl.java" />
       <file url="file://$PROJECT_DIR$/src/com/shop/controller/AdminProductController.java" />
       <file url="file://$PROJECT_DIR$/src/com/shop/service/AdminService.java" />
+      <file url="file://$PROJECT_DIR$/src/com/shop/controller/AdminController.java" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>

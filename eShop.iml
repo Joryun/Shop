@@ -72,6 +72,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/WebRoot" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -493,6 +494,5 @@
     <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.module.container" level="application" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.0" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.38" level="application_server_libraries" />
   </component>
 </module>
