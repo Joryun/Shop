@@ -13,8 +13,8 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Integer tid;
-    private Double privilege;
-    private Double consume;
+    private Float privilege;
+    private Float consume;
     private Date useTime;
 
     /*@OneToOne
@@ -34,19 +34,19 @@ public class Ticket {
         this.tid = tid;
     }
 
-    public Double getPrivilege() {
+    public Float getPrivilege() {
         return privilege;
     }
 
-    public void setPrivilege(Double privilege) {
+    public void setPrivilege(Float privilege) {
         this.privilege = privilege;
     }
 
-    public Double getConsume() {
+    public Float getConsume() {
         return consume;
     }
 
-    public void setConsume(Double consume) {
+    public void setConsume(Float consume) {
         this.consume = consume;
     }
 

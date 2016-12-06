@@ -38,8 +38,8 @@
 		</div>
 		<div class="span9">
 			<div class="headerAd">
-				<img src="${pageContext.request.contextPath}/image/header.jpg"
-					width="320" height="50" alt="正品保障" title="正品保障"/>
+				<%--<img src="${pageContext.request.contextPath}/image/header.jpg"
+					width="320" height="50" alt="正品保障" title="正品保障"/>--%>
 			</div>
 		</div>
 
@@ -49,8 +49,8 @@
 	<div class="container login">
 		<div class="span12">
 			<div class="ad">
-				<img src="${pageContext.request.contextPath}/image/login.jpg"
-					width="500" height="330" alt="会员登录" title="会员登录"/>
+				<%--<img src="${pageContext.request.contextPath}/image/login.jpg"
+					width="500" height="330" alt="会员登录" title="会员登录"/>--%>
 			</div>
 		</div>
 		<div class="span12 last">

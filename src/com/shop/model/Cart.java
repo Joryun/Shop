@@ -15,14 +15,16 @@ public class Cart {
 	}
 
 	//购物总计
-	private double total;
-	
-	public double getTotal() {
+	private float total;
+
+	public float getTotal() {
 		return total;
 	}
-	public void setTotal(double total) {
-	    this.total=total;
-		}
+
+	public void setTotal(float total) {
+		this.total = total;
+	}
+
 	//购物车的功能：
 	//1.将购物项添加到购物车
 	public void addCart(CartItem cartItem) {

@@ -21,7 +21,7 @@ public class OrderItem {
 	
 	private Integer count;
 	
-	private Double subtotal;
+	private Float subtotal;
 	
 	// 商品外键:对象
 	@JoinColumn(name="pid")
@@ -45,12 +45,15 @@ public class OrderItem {
 	public void setCount(Integer count) {
 		this.count = count;
 	}
-	public Double getSubtotal() {
+
+	public Float getSubtotal() {
 		return subtotal;
 	}
-	public void setSubtotal(Double subtotal) {
+
+	public void setSubtotal(Float subtotal) {
 		this.subtotal = subtotal;
 	}
+
 	public Product getProduct() {
 		return product;
 	}

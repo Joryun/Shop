@@ -58,7 +58,7 @@ public class CartController {
     //修改购物车优惠后的价格
  	@RequestMapping(value="/ChangeTotal/{total}",method=RequestMethod.POST)
  	@ResponseBody
- 	public String changeCart(@PathVariable("total") double total, HttpSession session) {
+ 	public String changeCart(@PathVariable("total") float total, HttpSession session) {
  	//	System.out.println(total);
  		 //获得购物车对象
         Cart cart = (Cart) session.getAttribute("cart");

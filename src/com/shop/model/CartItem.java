@@ -6,7 +6,7 @@ public class CartItem {
 	private Float price = 1.0f;	//计算价格
 	private int count; // 购买某种商品数量
 	@SuppressWarnings("unused")
-	private double subtotal; // 购买某种商品小计
+	private float subtotal; // 购买某种商品小计
 
 	public Product getProduct() {
 		return product;
@@ -32,11 +32,11 @@ public class CartItem {
 		this.count = count;
 	}
 
-	public void setSubtotal(double subtotal) {
+	public void setSubtotal(float subtotal) {
 		this.subtotal = subtotal;
 	}
 
-	public double getSubtotal() {
+	public float getSubtotal() {
 		/*if (product.getShop_price() != null) {
 			return count * product.getShop_price()
 					* product.getCategorySecond().getCategory().getDiscount();

@@ -21,7 +21,7 @@ public class Order {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
 	private Integer oid;
-	private Double total;
+	private Float total;
 	private Date ordertime;
 	private Integer state;// 1:未付款   2:订单已经付款   3:已经发货   4:订单结束
 	private String name;
@@ -43,12 +43,15 @@ public class Order {
 	public void setOid(Integer oid) {
 		this.oid = oid;
 	}
-	public Double getTotal() {
+
+	public Float getTotal() {
 		return total;
 	}
-	public void setTotal(Double total) {
+
+	public void setTotal(Float total) {
 		this.total = total;
 	}
+
 	public Date getOrdertime() {
 		return ordertime;
 	}

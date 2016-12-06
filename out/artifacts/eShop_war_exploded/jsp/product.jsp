@@ -46,9 +46,9 @@ function saveCart() {
 		</div>
 		<div class="span9">
 			<div class="headerAd">
-				<img
+				<%--<img
 					src="${pageContext.request.contextPath}/image/r___________renleipic_01/header.jpg"
-					alt="正品保障" title="正品保障" height="50" width="320" />
+					alt="正品保障" title="正品保障" height="50" width="320" />--%>
 			</div>
 		</div>
 		<%@ include file="menu.jsp"%>
