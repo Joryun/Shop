@@ -1,30 +1,17 @@
 package com.shop.controller;
 
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
-
+import com.shop.model.*;
+import com.shop.service.OrderService;
+import com.shop.service.ProductService;
+import com.shop.service.WalletService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.shop.model.Cart;
-import com.shop.model.CartItem;
-import com.shop.model.Order;
-import com.shop.model.OrderItem;
-import com.shop.model.Product;
-import com.shop.model.User;
-import com.shop.model.Wallet;
-import com.shop.service.OrderService;
-import com.shop.service.ProductService;
-import com.shop.service.WalletService;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+import java.util.*;
 
 @Controller
 public class OrderController{
