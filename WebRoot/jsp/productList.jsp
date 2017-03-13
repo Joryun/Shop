@@ -16,10 +16,10 @@
 	<div class="container header">
 		<div class="span5">
 			<div class="logo">
-				<a href="http://localhost:8080/mango/"> <img
+				<%--<a href="http://localhost:8080/mango/"> <img
 					src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.jpg"
 					alt="理央silence" />
-				</a>
+				</a>--%>
 			</div>
 		</div>
 		<div class="span9">
@@ -30,6 +30,7 @@
 		</div>
 		<%@ include file="menu.jsp"%>
 	</div>
+
 	<div class="container productList">
 		<div class="span6">
 			<div class="hotProductCategory">
@@ -52,6 +53,8 @@
 			</div>
 		</div>
 		<div class="span18 last">
+
+            <!-- 各项商品 -->
 			<form id="productForm"
 				action="${pageContext.request.contextPath}/image/蔬菜 - Powered By Mango Team.htm"
 				method="get">
@@ -71,6 +74,8 @@
 						</c:forEach>
 					</ul>
 				</div>
+
+                <!-- 分页 -->
 				<div class="pagination">
 				    <!-- 根据一级分类的cid是不是为空来显示上一页下一页的状况 -->
 					<c:if test="${cid != null }">
@@ -127,11 +132,13 @@
 								</c:if>
 							</span>
 						</c:forEach>
+
 						<!-- 下一页 -->
 						<c:if test="${page !=count }">
 							<span><a class="nextPage"
 								href="${pageContext.request.contextPath}/findByCsid/${csid}/<c:out value="${page+1}"/>"></a></span>
 						</c:if>
+
 						<!-- 尾页 -->
 						<a class="lastPage"
 							href="${pageContext.request.contextPath}/findByCsid/${csid}/<c:out value="${count}"/>"></a>
@@ -140,29 +147,11 @@
 			</form>
 		</div>
 	</div>
-	<%--<div class="container footer">
-		<div class="span24">
-			<div class="footerAd">
-				<img src="${pageContext.request.contextPath}/image/footer.jpg"
-					width="950" height="52" alt="我们的优势" title="我们的优势" />
-			</div>
-		</div>
-		<div class="span24">
-			<ul class="bottomNav">
-				<li><a>关于我们</a> |</li>
-				<li><a>联系我们</a> |</li>
-				<li><a>诚聘英才</a> |</li>
-				<li><a>法律声明</a> |</li>
-				<li><a>友情链接</a> |</li>
-				<li><a target="_blank">支付方式</a> |</li>
-				<li><a target="_blank">配送方式</a> |</li>
-				<li><a>官网</a> |</li>
-				<li><a>论坛</a></li>
-			</ul>
-		</div>
-		<div class="span24">
-				<div class="copyright">Copyright © 2016-2016 wl 版权所有</div>
-		</div>
-	</div>--%>
+	<div class="container footer">
+
+		<%--<div class="span24">
+				<div class="copyright">Copyright © 2016-2016  版权所有</div>
+		</div>--%>
+	</div>
 </body>
 </html>

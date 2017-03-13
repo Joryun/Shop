@@ -27,8 +27,7 @@
 		</div>
 		<div class="span9">
 			<div class="headerAd">
-				<%--<img src="${pageContext.request.contextPath}/image/header.jpg"
-					width="320" height="50" alt="正品保障" title="正品保障" />--%>
+
 			</div>
 		</div>
 		<%@ include file="menu.jsp"%>
@@ -94,33 +93,7 @@
                          <input name="total" type="hidden" value="${order.total}" />
 					</p>
 					<hr />
-					<%-- <p>
-						选择银行：<br /> <input type="radio" name="pd_FrpId"
-							value="ICBC-NET-B2C" checked="checked" />工商银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/icbc.bmp"
-							align="middle" />&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
-							name="pd_FrpId" value="BOC-NET-B2C" />中国银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/bc.bmp"
-							align="middle" />&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
-							name="pd_FrpId" value="ABC-NET-B2C" />农业银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/abc.bmp"
-							align="middle" /> <br /> <input type="radio" name="pd_FrpId"
-							value="BOCO-NET-B2C" />交通银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/bcc.bmp"
-							align="middle" />&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
-							name="pd_FrpId" value="PINGANBANK-NET" />平安银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/pingan.bmp"
-							align="middle" />&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
-							name="pd_FrpId" value="CCB-NET-B2C" />建设银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/ccb.bmp"
-							align="middle" /> <br /> <input type="radio" name="pd_FrpId"
-							value="CEB-NET-B2C" />光大银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/guangda.bmp"
-							align="middle" />&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio"
-							name="pd_FrpId" value="CMBCHINA-NET-B2C" />招商银行 <img
-							src="${ pageContext.request.contextPath }/bank_img/cmb.bmp"
-							align="middle" />
-					</p> --%>
+
 					<hr />
 					<p style="text-align: right">
 						<a
@@ -135,29 +108,11 @@
 		</div>
 
 	</div>
-	<%--<div class="container footer">
-		<div class="span24">
-			<div class="footerAd">
-				<img src="${pageContext.request.contextPath}/image/r___________renleipic_01/footer.jpg" alt="我们的优势"
-					title="我们的优势" height="52" width="950"/>
-			</div>
-		</div>
-		<div class="span24">
-			<ul class="bottomNav">
-				<li><a href="#">关于我们</a> |</li>
-				<li><a href="#">联系我们</a> |</li>
-				<li><a href="#">诚聘英才</a> |</li>
-				<li><a href="#">法律声明</a> |</li>
-				<li><a>友情链接</a> |</li>
-				<li><a target="_blank">支付方式</a> |</li>
-				<li><a target="_blank">配送方式</a> |</li>
-				<li><a>SHOP++官网</a> |</li>
-				<li><a>SHOP++论坛</a></li>
-			</ul>
-		</div>
-		<div class="span24">
-				<div class="copyright">Copyright © 2016-2016 wl 版权所有</div>
-		</div>
-	</div>--%>
+	<div class="container footer">
+
+		<%--<div class="span24">
+				<div class="copyright">Copyright © 2016-2016  版权所有</div>
+		</div>--%>
+	</div>
 </body>
 </html>
