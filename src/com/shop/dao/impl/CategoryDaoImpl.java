@@ -1,13 +1,12 @@
 package com.shop.dao.impl;
 
-import java.util.Date;
-import java.util.List;
-
+import com.shop.dao.CategoryDao;
+import com.shop.model.Category;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
-import com.shop.dao.CategoryDao;
-import com.shop.model.Category;
+import java.util.Date;
+import java.util.List;
 
 @Repository("categoryDao")
 @SuppressWarnings("all")

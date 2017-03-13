@@ -5,4 +5,5 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-<jsp:forward page="index"/>
+
+<jsp:forward page="index" />

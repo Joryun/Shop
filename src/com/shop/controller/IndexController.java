@@ -1,15 +1,14 @@
 package com.shop.controller;
 
-import java.util.Map;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
-
+import com.shop.service.CategoryService;
+import com.shop.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.shop.service.CategoryService;
-import com.shop.service.ProductService;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+import java.util.Map;
+
 @Controller
 public class IndexController {
 	@Resource

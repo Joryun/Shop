@@ -1,7 +1,8 @@
 package com.shop.dao;
 
-import java.util.List;
 import com.shop.model.User;
+
+import java.util.List;
 
 public interface UserDao extends BaseDao<User> {
 
