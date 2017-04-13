@@ -16,7 +16,7 @@
   <frame src="adminTop" name="topFrame" scrolling="NO" noresize>
   <frameset cols="159,*" frameborder="0" border="0" framespacing="0">
 		<frame src="adminLeft" name="leftFrame" noresize scrolling="YES">
-		<frame src="adminWelcome"" name="mainFrame">
+		<frame src="adminWelcome" name="mainFrame">
   </frameset>
   <frame src="adminBottom" name="bottomFrame" scrolling="NO"  noresize>
 </frameset>

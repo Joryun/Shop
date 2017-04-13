@@ -320,7 +320,7 @@ div.index .hotProduct .title {
 	float: left;
 	margin-bottom: 10px;
 	/* background: url(../images/index.gif) 0px -150px no-repeat; */
-	background-color: #825996;
+	background-color: #36648B;
 }
 
 div.index .hotProduct .title strong {
@@ -348,7 +348,7 @@ div.index .hotProduct .tab {
 	margin-bottom: 10px;
 	overflow: hidden;
 	/* background: url(../images/index.gif) 0px -210px repeat-x; */
-	background-color: #825996;
+	background-color: #36648B;
 }
 
 div.index .hotProduct .tab li {
@@ -360,13 +360,13 @@ div.index .hotProduct .tab li {
 	font-size: 14px;
 	text-align: center;
 	overflow: hidden;
-	
+
 
 }
 
 div.index .hotProduct .tab li.current {
 	font-weight: bold;
-	background-color: #825996;
+	background-color: #36648B;
 }
 
 div.index .hotProduct .hotProductAd {
@@ -413,8 +413,7 @@ div.index .newProduct .title {
 	float: left;
 	margin-bottom: 10px;
 	/* background: url(../images/index.gif) 0px -270px no-repeat; */
-	background-color: #AB7156;
-
+	background-color: #2F4F4F;
 }
 
 div.index .newProduct .title strong {
@@ -442,7 +441,7 @@ div.index .newProduct .tab {
 	margin-bottom: 10px;
 	overflow: hidden;
 	/* background: url(../images/index.gif) 0px -330px repeat-x; */
-	background-color: #AB7156;
+	background-color: #2F4F4F;
 }
 
 div.index .newProduct .tab li {
@@ -454,12 +453,12 @@ div.index .newProduct .tab li {
 	font-size: 14px;
 	text-align: center;
 	overflow: hidden;
-	
+
 }
 
 div.index .newProduct .tab li.current {
 	font-weight: bold;
-	background-color: #AB7156;
+	background-color: #2F4F4F;
 }
 
 div.index .newProduct .newProductAd {

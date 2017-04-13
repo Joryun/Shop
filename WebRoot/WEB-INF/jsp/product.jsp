@@ -37,12 +37,7 @@ function saveCart() {
 
 	<div class="container header">
 		<div class="span5">
-			<div class="logo">
-				<a> <img
-					src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.jpg"
-					alt="网上商城" />
-				</a>
-			</div>
+
 		</div>
 		<div class="span9">
 			<div class="headerAd">

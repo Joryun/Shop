@@ -14,6 +14,7 @@
     <link href="${pageContext.request.contextPath}/css/cart.css"
           rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.8.3.js"></script>
+
     <script language="JavaScript">
         $(document).ready(function () {
             //checkbox框被单击的事件处理
@@ -56,12 +57,7 @@
 <body>
 <div class="container header">
     <div class="span5">
-        <div class="logo">
-            <a href="http://localhost:8080/eShop/"> <img
-                    src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.jpg"
-                    alt="网上商城"/>
-            </a>
-        </div>
+
     </div>
     <div class="span9">
 
@@ -216,9 +212,15 @@
             <div class="step step1">
                 <center style="color: red">
 						<span><h2>
-						<a href="http://localhost:8080/index">
-						亲!您还没有购物!请先去购物!
+                            您还没有
+						<a href="${ pageContext.request.contextPath }/index" style="color: #843d11">
+                            购物
 						</a>
+                            或未
+                        <a href="${ pageContext.request.contextPath }/userLogin" style="color: #843d11">
+                            登录
+                        </a>
+                            ！！！
 						</h2></span>
                 </center>
             </div>

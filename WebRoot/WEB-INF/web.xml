@@ -11,6 +11,7 @@
         <param-value>classpath*:applicationContext.xml</param-value>
     </context-param>
 
+    <!-- 监听器作用：启动Web容器时，自动装配ApplicationContext的配置信息 -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
@@ -54,6 +55,23 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+
+    <!--<servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.gif</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>-->
 
 
     <welcome-file-list>

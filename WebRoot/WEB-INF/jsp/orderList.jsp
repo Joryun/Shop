@@ -17,12 +17,7 @@
 <body>
 	<div class="container header">
 		<div class="span5">
-			<div class="logo">
-				<a href="./网上商城/index.htm"> <img
-					src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.jpg"
-					alt="silence商城" />
-				</a>
-			</div>
+
 		</div>
 		<div class="span9">
 			<div class="headerAd">

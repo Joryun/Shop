@@ -29,12 +29,7 @@
 
 	<div class="container header">
 		<div class="span5">
-			<div class="logo">
-				<a href="http://localhost:8080/mango/"> <img
-					src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.jpg"
-					alt="网上商城" />
-				</a>
-			</div>
+
 		</div>
 		<div class="span9">
 			<div class="headerAd">
@@ -114,10 +109,12 @@
 									<th>&nbsp;</th>
 									<td>
 										<dl>
-											<dt>还没有注册账号？</dt>
-											<dd>
+											<dt>
+                                                <a href="${pageContext.request.contextPath }/userRegister">还没有注册账号？立即注册</a>
+                                            </dt>
+											<%--<dd>
 												立即注册即可体验在线购物！ <a href="${pageContext.request.contextPath }/userRegister">立即注册</a>
-											</dd>
+											</dd>--%>
 										</dl>
 									</td>
 								</tr>

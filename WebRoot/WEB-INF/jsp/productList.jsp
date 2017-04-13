@@ -15,17 +15,11 @@
 <body>
 	<div class="container header">
 		<div class="span5">
-			<div class="logo">
-				<%--<a href="http://localhost:8080/mango/"> <img
-					src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.jpg"
-					alt="理央silence" />
-				</a>--%>
-			</div>
+
 		</div>
 		<div class="span9">
 			<div class="headerAd">
-				<%--<img src="${pageContext.request.contextPath}/image/header.jpg"
-					width="320" height="50" alt="正品保障" title="正品保障" />--%>
+
 			</div>
 		</div>
 		<%@ include file="menu.jsp"%>
@@ -77,6 +71,7 @@
 
                 <!-- 分页 -->
 				<div class="pagination">
+
 				    <!-- 根据一级分类的cid是不是为空来显示上一页下一页的状况 -->
 					<c:if test="${cid != null }">
 						<span>第 <c:out value="${page}" />/<c:out value="${count}" />页
@@ -88,6 +83,7 @@
 							<span><a class="previousPage"
 								href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page-1}"/>"></a></span>
 						</c:if>
+
 						<c:forEach var="i" begin="1" end="${count }">
 							<span>
 							   <!-- 如果是当前页则不能够点击 -->
@@ -100,26 +96,32 @@
 								</c:if>
 							</span>
 						</c:forEach>
+
 						<!-- 下一页 -->
 						<c:if test="${page !=count }">
 							<span><a class="nextPage"
 								href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${page+1}"/>"></a></span>
 						</c:if>
+
 						<!-- 尾页 -->
 						<a class="lastPage"
 							href="${pageContext.request.contextPath}/findByCid/${cid}/<c:out value="${count}"/>"></a>
 					</c:if>
+
 					<!-- 二级分类的上一页和下一页 -->
 					<c:if test="${csid != null }">
 						<span>第 <c:out value="${page}" />/<c:out value="${count}" />页
 						</span>
+
 						<!-- 首页 -->
 						<span><a class="firstPage"
 							href="${pageContext.request.contextPath}/findByCsid/${csid}/1"></a></span>
+
 						<c:if test="${page != 1}">
 							<span><a class="previousPage"
 								href="${pageContext.request.contextPath}/findByCsid/${csid}/<c:out value="${page-1}"/>"></a></span>
 						</c:if>
+
 						<c:forEach var="i" begin="1" end="${count }">
 							<span>
 							   <!-- 如果是当前页则不能够点击 -->
