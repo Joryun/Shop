@@ -12,11 +12,12 @@
 	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 	http://www.springframework.org/schema/mvc  
 	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
-	
+
 	<!-- 配置自动扫描的包 -->
 	<context:component-scan base-package="com.shop">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
+
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
@@ -30,11 +31,15 @@
 		<property name="driverClass" value="${jdbc.driverClass}"></property>
 		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
 		<!-- 配置其他属性 -->
+
 	</bean>
 	
-	<!--配置SessionFactory  -->
+	<!-- 配置SessionFactory -->
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource"><ref bean="dataSource" /></property>
+		<property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
@@ -43,7 +48,7 @@
 				<prop key="hibernate.format_sql">true</prop>
 			</props>
 		</property>
-		
+
 		<property name="packagesToScan">
 			<list>
 				<value>com.shop.model</value>
@@ -52,15 +57,19 @@
 	</bean>
 	
 	<!-- 配置事务管理器 -->
-	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
+
 	</bean>
 	
 	<!-- 开启注解事务--> 
-	<tx:annotation-driven transaction-manager="transactionManager" />	
-	<mvc:annotation-driven/>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+    <!-- 自动注册 DefaultAnnotationHandlerMapping 与 AnnotationMethodHandlerAdapter 两个bean,
+    是spring MVC为@Controllers分发请求所必须的 -->
+	<mvc:annotation-driven />
 	
 </beans>
