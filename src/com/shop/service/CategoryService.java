@@ -1,11 +1,11 @@
 package com.shop.service;
 
-import java.util.List;
-
 import com.shop.model.Category;
 
+import java.util.List;
+
 public interface CategoryService {
-	
-	public List<Category> getCategory();
-	
+
+    public List<Category> getCategory();
+
 }

@@ -1,12 +1,11 @@
 package com.shop.model;
 
 
-
 import javax.persistence.*;
 
 /**
  * Created by Joryun on 2016/11/30.
- *
+ * <p>
  * 用户卡包的实体对象
  */
 
@@ -19,9 +18,9 @@ public class Packet {
     private Integer uid;
 
     //外键
-    @OneToOne(optional=false)
-    @JoinColumn(name="uid", unique=true, nullable=false, updatable=false,insertable=false)
-    private	User user;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "uid", unique = true, nullable = false, updatable = false, insertable = false)
+    private User user;
 
     public Integer getPacid() {
         return pacid;

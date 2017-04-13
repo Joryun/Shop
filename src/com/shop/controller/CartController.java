@@ -5,21 +5,14 @@ import com.shop.service.PacketService;
 import com.shop.service.ProductService;
 import com.shop.service.TicketService;
 import com.shop.service.UserService;
-
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 
@@ -54,19 +47,19 @@ public class CartController {
         cart.removeCart(pid);
         return "cart";
     }
-    
+
     //修改购物车优惠后的价格
- 	@RequestMapping(value="/ChangeTotal/{total}",method=RequestMethod.POST)
- 	@ResponseBody
- 	public String changeCart(@PathVariable("total") float total, HttpSession session) {
- 	//	System.out.println(total);
- 		 //获得购物车对象
+    @RequestMapping(value = "/ChangeTotal/{total}", method = RequestMethod.POST)
+    @ResponseBody
+    public String changeCart(@PathVariable("total") float total, HttpSession session) {
+        //	System.out.println(total);
+        //获得购物车对象
         Cart cart = (Cart) session.getAttribute("cart");
         cart.setTotal(total);
         session.setAttribute("cart", cart);
- 		return null;
- 	}
- 	
+        return null;
+    }
+
     //添加到购物车
     @RequestMapping(value = "/addCart")
     public String addCart(Integer pid, Integer count, HttpSession session, Map<String, Object> map) {
@@ -80,7 +73,7 @@ public class CartController {
         Category category = categorySecond.getCategory();
 
         Date privilege = category.getPrivilegeTime();
-        String privilegeTime = privilege.toString().substring(0, 10);	//截取category表中privilegeTime字段的年月日
+        String privilegeTime = privilege.toString().substring(0, 10);    //截取category表中privilegeTime字段的年月日
         map.put("privilegeTime", privilegeTime);    //put privilegeTime
 
 //        System.out.println(category.getCid());

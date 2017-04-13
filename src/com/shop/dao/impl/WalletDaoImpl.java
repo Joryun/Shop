@@ -8,6 +8,6 @@ import com.shop.model.Wallet;
 
 @Repository("walletDao")
 @SuppressWarnings("all")
-public class WalletDaoImpl extends BaseDaoImpl<Wallet> implements WalletDao{
+public class WalletDaoImpl extends BaseDaoImpl<Wallet> implements WalletDao {
 
 }

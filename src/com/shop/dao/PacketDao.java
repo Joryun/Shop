@@ -1,6 +1,5 @@
 package com.shop.dao;
 
-import com.shop.model.Order;
 import com.shop.model.Packet;
 
 /**
@@ -8,6 +7,11 @@ import com.shop.model.Packet;
  */
 public interface PacketDao extends BaseDao<Packet> {
 
-    //根据uid查询packet对象
+    /**
+     * 根据uid查询packet对象
+     *
+     * @param uid
+     * @return
+     */
     public Integer findByUid(Integer uid);
 }

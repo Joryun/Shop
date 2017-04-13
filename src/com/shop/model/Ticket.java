@@ -22,9 +22,9 @@ public class Ticket {
     private Category category;*/
 
     // 用户的:外键
-    @OneToOne(optional=false)
-    @JoinColumn(name="cid", unique=true, nullable=false, updatable=false,insertable=false)
-    private	Category category;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "cid", unique = true, nullable = false, updatable = false, insertable = false)
+    private Category category;
 
     public Integer getTid() {
         return tid;
