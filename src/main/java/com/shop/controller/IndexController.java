@@ -22,6 +22,7 @@ public class IndexController {
     public String showIndex(Map<String, Object> map, HttpSession session) {
         //把所有的一级分类都存入到session中
         session.setAttribute("cList", categoryService.getCategory());
+
         //把最新的10条商品存放到map集合中
         map.put("nList", productService.findNew());
         //把最热的10条商品添加到map集合中

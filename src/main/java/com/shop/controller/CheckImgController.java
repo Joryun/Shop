@@ -17,6 +17,7 @@ import java.util.Random;
 public class CheckImgController {
     @RequestMapping("getCheckCodeImage")
     public String getImage(HttpSession session, HttpServletResponse response) throws Exception {
+
         int width = 120;
         int height = 30;
 
@@ -66,7 +67,8 @@ public class CheckImgController {
             x += 30;
         }
         // 将生成的字母存入到session中
-        session.setAttribute("checkcode", sb.toString());
+        session.setAttribute("checkcode", sb.toString());   //TODO
+
         // 步骤五 绘制干扰线
         graphics.setColor(getRandColor(160, 200));
         int x1;
@@ -94,6 +96,7 @@ public class CheckImgController {
      * @return Color
      */
     private Color getRandColor(int fc, int bc) {
+
         // 取其随机颜色
         Random random = new Random();
         if (fc > 255) {

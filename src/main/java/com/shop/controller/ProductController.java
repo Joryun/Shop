@@ -42,6 +42,7 @@ public class ProductController {
     @RequestMapping(value = "/findByCid/{cid}/{page}")
     public String findByCid(@PathVariable("cid") Integer cid, @PathVariable("page") Integer page
             , Map<String, Object> map) {
+
         List<Product> products = productService.findByCid(cid, page);
         Integer count = productService.CountPageProductFromCategory(cid);
         if (page > count) {
@@ -59,6 +60,7 @@ public class ProductController {
     //根据商品的pid查询商品
     @RequestMapping(value = "findByPid/{pid}", method = RequestMethod.GET)
     public String findByPid(@PathVariable("pid") Integer pid, Map<String, Object> map) {
+
 //		map.put("product", productService.findByPid(pid));
         Product products = productService.findByPid(pid);
         map.put("product", products);    //put product
@@ -68,9 +70,11 @@ public class ProductController {
 
         Category category = categorySecond.getCategory();
 //		map.put("category", category);
+
         Date privilege = category.getPrivilegeTime();
         String privilegeTime = privilege.toString().substring(0, 10);    //截取category表中privilegeTime字段的年月日
 //		int length = privilegeTime.length();
+
         map.put("privilegeTime", privilegeTime);    //put privilegeTime
 
         return "product";

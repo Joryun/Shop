@@ -35,13 +35,14 @@
 
 <div class="container index">
 
+    <!-- 热门商品 -->
     <div class="span24">
         <div id="hotProduct" class="hotProduct clearfix">
 
             <div class="title">
                 <strong>热门商品</strong>
-                <!-- <a  target="_blank"></a> -->
             </div>
+
             <ul class="tab">
                 <li class="current"><a href="#" target="_blank"></a></li>
                 <li><a target="_blank"></a></li>
@@ -50,16 +51,18 @@
 
             <ul class="tabContent" style="display: block;">
                 <c:forEach var="p" items="${hList}">
-                    <li><a
-                            href="${pageContext.request.contextPath }/findByPid/<c:out value="${p.pid}"/>"
+                    <li>
+                        <a href="${pageContext.request.contextPath }/findByPid/<c:out value="${p.pid}"/>"
                             target="_blank"> <img
                             src="${pageContext.request.contextPath }/<c:out value="${p.image }"/>"
-                            style="display: block;"/></a></li>
+                            style="display: block;"/></a>
+                    </li>
                 </c:forEach>
             </ul>
         </div>
     </div>
 
+    <!-- 最新商品 -->
     <div class="span24">
         <div id="newProduct" class="newProduct clearfix">
             <div class="title">
@@ -83,41 +86,9 @@
         </div>
     </div>
 
-    <div class="span24"><%--
-			<div class="friendLink">
-				<dl>
-					<dt>新手指南</dt>
-					<dd>
-						<a target="_blank">支付方式</a> |
-					</dd>
-					<dd>
-						<a target="_blank">配送方式</a> |
-					</dd>
-					<dd>
-						<a target="_blank">售后服务</a> |
-					</dd>
-					<dd>
-						<a target="_blank">购物帮助</a> |
-					</dd>
-					<dd>
-						<a target="_blank">蔬菜卡</a> |
-					</dd>
-					<dd>
-						<a target="_blank">礼品卡</a> |
-					</dd>
-					<dd>
-						<a target="_blank">银联卡</a> |
-					</dd>
-					<dd>
-						<a target="_blank">亿家卡</a> |
-					</dd>
+    <div class="span24">
 
-					<dd class="more">
-						<a>更多</a>
-					</dd>
-				</dl>
-			</div>
-		--%></div>
+    </div>
 </div>
 
 <div class="container footer">

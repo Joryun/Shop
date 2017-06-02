@@ -49,6 +49,7 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
     }
 
     private List<Product> Query(Integer csid, Integer page, String hql) {
+
         int rows = 12;
         Query query = this.getCurrentSession().createQuery(hql);
         query.setParameter(0, csid);
@@ -57,8 +58,10 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
         List<Product> products = new ArrayList<Product>();
         Iterator iter = list.iterator();
         while (iter.hasNext()) {
+
             Object[] obj = (Object[]) iter.next();
             Product product = new Product();
+
             int pid = (Integer) obj[0];
             product.setPid(pid);
             product.setImage((String) obj[1]);

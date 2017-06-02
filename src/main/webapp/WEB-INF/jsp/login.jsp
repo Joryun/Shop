@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.8.3.js"></script>
+
 <script type="text/javascript">
   $(function(){
 	  //点击更换验证码
@@ -18,6 +19,7 @@
 	  });
   });
 </script>
+
 <title>会员登录</title>
 
 <link href="${pageContext.request.contextPath}/css/common.css"
@@ -25,6 +27,7 @@
 <link href="${pageContext.request.contextPath}/css/login.css"
 	rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 
 	<div class="container header">
@@ -40,11 +43,11 @@
 		<%@ include file="menu.jsp"%>
 
 	</div>
+
 	<div class="container login">
 		<div class="span12">
 			<div class="ad">
-				<%--<img src="${pageContext.request.contextPath}/image/login.jpg"
-					width="500" height="330" alt="会员登录" title="会员登录"/>--%>
+
 			</div>
 		</div>
 		<div class="span12 last">
@@ -53,6 +56,7 @@
 					<div class="title">
 						<strong>会员登录</strong>USER LOGIN
 					</div>
+
 					<form:form id="loginForm" modelAttribute="user" commandName="user"
 						action="${ pageContext.request.contextPath }/login"
 						method="post">
@@ -61,7 +65,7 @@
 								<tr>
 									<th>用户名:</th>
 									<td><form:input path="username" name="username" id="username"
-										class="text" maxlength="20"/>
+										class="text" maxlength="20" />
 										<c:if test="${notUser != null }">
 										    <font color="red">没有此用户</font>
 										</c:if>
@@ -70,6 +74,7 @@
 										</c:if>
 									</td>
 								</tr>
+
 								<tr>
 									<th>密&nbsp;&nbsp;码:</th>
 									<td><form:password id="password" path="password"
@@ -79,6 +84,7 @@
 										</c:if>
 									</td>
 								</tr>
+
 								<tr>
 									<th>
 										验证码:
@@ -96,10 +102,13 @@
 								</tr>
 								<tr>
 									<th>&nbsp;</th>
-									<td><label> <input type="checkbox"
+									<td>
+                                        <label> <input type="checkbox"
 											id="isRememberUsername" name="isRememberUsername"
-											value="true"/>记住用户名 </label> <label> &nbsp;&nbsp;<a>找回密码</a>
-									</label></td>
+											value="true"/>记住用户名 </label>
+                                        <label> &nbsp;&nbsp;<a>找回密码</a>
+									    </label>
+                                    </td>
 								</tr>
 								<tr>
 									<th>&nbsp;</th>
@@ -112,15 +121,13 @@
 											<dt>
                                                 <a href="${pageContext.request.contextPath }/userRegister">还没有注册账号？立即注册</a>
                                             </dt>
-											<%--<dd>
-												立即注册即可体验在线购物！ <a href="${pageContext.request.contextPath }/userRegister">立即注册</a>
-											</dd>--%>
 										</dl>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</form:form>
+
 				</div>
 			</div>
 		</div>

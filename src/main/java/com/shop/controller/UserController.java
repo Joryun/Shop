@@ -90,30 +90,36 @@ public class UserController {
     }
 
     // 用户注册
-    //这里一个@Valid的参数后必须紧挨着一个BindingResult 参数，否则spring会在校验不通过时直接抛出异常
+    // 这里一个@Valid的参数后必须紧挨着一个 BindingResult 参数，否则spring会在校验不通过时直接抛出异常
     @RequestMapping(value = "register", method = RequestMethod.POST)
     public String register(@ModelAttribute @Valid User user, BindingResult result, HttpSession session,
                            String checkcode, Map<String, Object> map) {
+
         //如果有错误，直接跳转到注册的页面
         if (result.hasErrors()) {
+
             //在控制台打印错误的信息
             List<ObjectError> errorList = result.getAllErrors();
             for (ObjectError error : errorList) {
                 System.out.println(error.getDefaultMessage());
             }
+
             //返回到注册页面
             return "regist";
         }
+
         //从session中获取验证码
         String checkCode = (String) session.getAttribute("checkcode");
         System.out.println("后台验证码" + checkCode);
         System.out.println("前台验证码" + checkcode);
+
         //如果验证码不一致，直接返回
         if (!checkCode.equalsIgnoreCase(checkcode)) {
             map.put("errorCheckCode", "errorCheckCode");
             return "regist";
         }
         userService.register(user);
+        
         return "msg";
     }
 
@@ -122,12 +128,15 @@ public class UserController {
     @ResponseBody
     public String existUser(@PathVariable("userName") String userName, HttpServletResponse response)
             throws IOException {
+
         System.out.println(userName);
         response.setContentType("text/html;charset=UTF-8");
         if (userService.existUser(userName) != null) {
+
             // 查询到该用户:用户名已经存在
             response.getWriter().println("1");
         } else {
+
             // 没查询到该用户:用户名可以使用
             response.getWriter().println("0");
         }

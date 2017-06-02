@@ -17,10 +17,8 @@ import java.util.Map;
 @SuppressWarnings("all")
 public class BaseDaoImpl<T> implements BaseDao<T> {
 
-
     private SessionFactory sessionFactory;
     private Class<T> clz;
-
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;
