@@ -8,7 +8,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:spring-dao.xml</param-value>
+        <param-value>classpath:spring-*.xml</param-value>
     </context-param>
 
     <!-- 监听器作用：启动Web容器时，自动装配ApplicationContext的配置信息 -->
