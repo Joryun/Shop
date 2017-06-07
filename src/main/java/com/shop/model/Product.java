@@ -9,6 +9,7 @@ import java.util.Date;
 @Table(name = "product")
 @Entity
 public class Product {
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Integer pid;

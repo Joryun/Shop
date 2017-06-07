@@ -22,6 +22,7 @@
             //验证购买数量是否非法
             var count = $("#count").val();
             var inventory = $("#inventory").val();
+
             if (eval(count) > eval(inventory)) {
                 alert("库存量不足");
                 return fasle;
@@ -168,6 +169,7 @@
         <form id="cartForm"
               action="${ pageContext.request.contextPath }/addCart" method="post">
 
+            <!-- 隐藏域传商品id -->
             <input type="hidden" name="pid"
                    value="<c:out value="${product.pid }"/>"/>
 
@@ -199,6 +201,7 @@
                 <li id="introductionTab"><a href="#introduction">商品介绍</a></li>
             </ul>
         </div>
+
         <div id="introduction" name="introduction" class="introduction">
             <div class="title">
                 <!-- 商品的描述 -->
@@ -212,6 +215,7 @@
         </div>
     </div>
 </div>
+
 <div class="container footer">
 
     <%--<div class="span24">

@@ -18,10 +18,12 @@ public class CategorySecond implements Serializable {
     @Id
     private Integer csid;
     private String csname;
+
     // 所属一级分类.存的是一级分类的对象.
     @JoinColumn(name = "cid")
     @ManyToOne
     private Category category;
+
     // 配置商品集合
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "categorySecond")
     private Set<Product> products = new HashSet<Product>();

@@ -81,9 +81,7 @@ public class CartController {
 
 //        Ticket ticket = ticketService.findTicketByCid(1);
         Ticket ticket = category.getTicket();
-
         map.put("ticket", ticket);  //put ticket对象
-
         map.put("count", count);    //put count
 
         Float finalPrice = Float.valueOf(((String) session.getAttribute("price")).replace(",", ""));
@@ -96,7 +94,6 @@ public class CartController {
         CartItem cartItem = new CartItem();
         cartItem.setCount(count);
         cartItem.setProduct(product);
-
         cartItem.setPrice(finalPrice);
 
         Cart cart = (Cart) session.getAttribute("cart");
