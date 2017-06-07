@@ -58,9 +58,17 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/applicationContext.xml</file>
-          <file>file://$MODULE_DIR$/src/main/java/springMVC-servlet.xml</file>
+        <fileset id="fileset" name="Spring Application Context" removed="false" />
+        <fileset id="web application context" name="MVC application context" removed="true">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-dao.xml</file>
+        </fileset>
+        <fileset id="web springMVC servlet context" name="MVC springMVC servlet context" removed="true">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-web.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-service.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-web.xml</file>
         </fileset>
       </configuration>
     </facet>

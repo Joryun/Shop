@@ -89,8 +89,7 @@
                     <tr>
                         <td width="60">
                             <a href="${pageContext.request.contextPath }/findByPid/<c:out value="${cartItem.product.pid}"/>">
-                                <img
-                                        src="${pageContext.request.contextPath}/<c:out value="${cartItem.product.image}"/>"/>
+                                <img src="${pageContext.request.contextPath}/<c:out value="${cartItem.product.image}"/>"/>
                             </a>
                         </td>
 
@@ -112,7 +111,7 @@
 
                         <c:if test="${currentTime ==  privilegeTime}">
                             <td>￥<fmt:formatNumber type="number" minFractionDigits="1"
-                                                   value="${cartItem.product.shop_price*cartItem.product.categorySecond.category.discount }"
+                                                   value="${cartItem.product.shop_price * cartItem.product.categorySecond.category.discount }"
                                                    maxFractionDigits="1"/>
                             </td>
                             <%--<td class="quantity" width="60"><c:out value="${cartItem.count}" /></td>--%>
@@ -122,7 +121,6 @@
 
                             <%--<td>￥<fmt:formatNumber type="number" minFractionDigits="1" value="${cartItem.product.shop_price*cartItem.product.categorySecond.category.discount }" maxFractionDigits="1"/>--%>
                             <%--</td>--%>
-
 
                         <td class="quantity" width="60"><c:out value="${cartItem.count}"/></td>
                         <td width="140"><span class="subtotal">￥<c:out
@@ -144,21 +142,15 @@
                     <%-- 若用户未登录 --%>
                 <c:if test="${sessionScope.user == null}">
                     <em> 登录后确认是否享有优惠 </em>
-
-                    </strong>
                 </c:if>
 
                     <%-- 若用户已登录 --%>
                 <c:if test="${sessionScope.user != null}">
 
                     <%-- 判断是否为活动日 --%>
-
-
                     <c:if test="${currentTime !=  privilegeTime}">
                         <em> 暂无可用优惠券 </em>
-
                     </c:if>
-
 
                     <c:if test="${currentTime ==  privilegeTime}">
 
@@ -180,7 +172,10 @@
                             <%--<em> 满${ticket.consume}减${ticket.privilege} </em>--%>
                             <em><input id="checkbox" type="checkbox" value="privilege">满<c:out
                                     value="${ticket.consume}"/>减<c:out value="${ticket.privilege}"/></em>
+
+                            <%-- 隐藏域，优惠金额 --%>
                             <input type="hidden" id="privilege" value="<c:out value="${ticket.privilege}"/>"/>
+                            <%-- 隐藏域，购物总计 --%>
                             <input type="hidden" id="total" value="<c:out value="${sessionScope.cart.total}"/>"/>
                         </c:if>
 
@@ -197,12 +192,8 @@
                 </strong>
             </div>
             <div class="bottom">
-
-                <a
-                        href="${ pageContext.request.contextPath }/clearCart"
-                        id="clear" class="clear">清空购物车</a> <a
-                    href="${pageContext.request.contextPath}/saveOrder"
-                    id="submit" class="submit">提交订单</a>
+                <a href="${ pageContext.request.contextPath }/clearCart" id="clear" class="clear">清空购物车</a>
+                <a href="${pageContext.request.contextPath}/saveOrder" id="submit" class="submit">提交订单</a>
             </div>
         </div>
     </c:if>

@@ -37,7 +37,7 @@ public class Cart {
 		 * 向map中添加购物项
 		 * 总计 += 购物项小计
 		 */
-		//获得商品pid;
+		//获得商品pid
 		Integer pid = cartItem.getProduct().getPid();
 		//判断购物车中是否已经存在该购物项
 		if(map.containsKey(pid)){

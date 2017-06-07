@@ -10,7 +10,6 @@ public interface OrderService {
     // 业务层保存订单的方法
     public void save(Order order);
 
-
     // 业务层根据用户id查询订单,带分页查询.
     public List<Order> findByUid(Integer uid, Integer page);
 

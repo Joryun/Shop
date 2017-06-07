@@ -57,6 +57,7 @@ public class ProductDaoImpl extends BaseDaoImpl<Product> implements ProductDao {
 
         List<Product> products = new ArrayList<Product>();
         Iterator iter = list.iterator();
+
         while (iter.hasNext()) {
 
             Object[] obj = (Object[]) iter.next();

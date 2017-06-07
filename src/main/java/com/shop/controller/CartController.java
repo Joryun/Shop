@@ -76,18 +76,12 @@ public class CartController {
         String privilegeTime = privilege.toString().substring(0, 10);    //截取category表中privilegeTime字段的年月日
         map.put("privilegeTime", privilegeTime);    //put privilegeTime
 
-//        System.out.println(category.getCid());
-
-
 //        Ticket ticket = ticketService.findTicketByCid(1);
         Ticket ticket = category.getTicket();
         map.put("ticket", ticket);  //put ticket对象
         map.put("count", count);    //put count
 
         Float finalPrice = Float.valueOf(((String) session.getAttribute("price")).replace(",", ""));
-
-//        System.out.println(finalPrice);
-
 
 //        User user = (User) session.getAttribute("user");
 

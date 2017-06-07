@@ -66,9 +66,11 @@
 									<th>用户名:</th>
 									<td><form:input path="username" name="username" id="username"
 										class="text" maxlength="20" />
+										<%--
 										<c:if test="${notUser != null }">
 										    <font color="red">没有此用户</font>
 										</c:if>
+										--%>
 										<c:if test="${notActive != null }">
 										    <font color="red">此用户还没有激活</font>
 										</c:if>

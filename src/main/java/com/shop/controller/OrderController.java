@@ -56,7 +56,7 @@ public class OrderController {
     }
 
     //保存订单
-    @RequestMapping(value = "saveOrder")
+    @RequestMapping(value = "/saveOrder")
     public String saveOrder(HttpSession session, Map<String, Object> map) {
         //判断用户是否登陆,
         User user = (User) session.getAttribute("user");
@@ -70,6 +70,7 @@ public class OrderController {
         if (cart == null) {
             return "redirect:myCart";
         }
+
         //订单对象
         Order order = new Order();
         order.setTotal(cart.getTotal());
@@ -113,12 +114,15 @@ public class OrderController {
         order.setName(name);
         order.setPhone(phone);
         orderService.update(order);
+
         User user = order.getUser();
         Wallet wallet = user.getWallet();
         Float money = wallet.getMoney();
         //	System.out.println("money!"+money);
         Float total1 = Float.parseFloat(total);
+
         if (money >= total1) {       //更新商品数量
+
             System.out.println("start::");
             //System.out.println(cart.getTotal());
             for (OrderItem orderItem : order.getOrderItems()) {
@@ -130,19 +134,23 @@ public class OrderController {
 //				  product.setPname(goodName);
 //				  product.setPdesc(orderItem.getProduct().getPdesc());
                 product.setInventory(inventory - orderItem.getCount());
+
                 System.out.println(orderItem.getProduct().getPdesc());
                 System.out.println("购买后的次数=" + product.getInventory());
                 productService.update(product);
             }
             System.out.println("end::");
+
             //减去消费的价格
             wallet.setMoney(money - total1);
             walletService.update(wallet);
+
             // 修改订单的状态:
             Order currOrder = orderService.findByOid(oid);
             // 修改订单状态为2:已经付款:
             currOrder.setState(2);
             orderService.save(currOrder);
+
             map.put("paymentSuccess", "success");
             return "orderList";
         }
@@ -183,7 +191,7 @@ public class OrderController {
 //		sb.append("pd_FrpId=").append(pd_FrpId).append("&");
 //		sb.append("pr_NeedResponse=").append(pr_NeedResponse).append("&");
 //		sb.append("hmac=").append(hmac);
-        // 重定向:向易宝出发:
+
         return "orderList";
     }
 

@@ -14,19 +14,14 @@
 	http://www.springframework.org/schema/mvc  
 	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
+    <!-- 配置数据库相关参数 -->
+    <context:property-placeholder location="classpath:db.properties"/>
+
     <!-- 配置自动扫描的包 -->
     <context:component-scan base-package="com.shop">
-
-        <context:exclude-filter type="annotation"
-                                expression="org.springframework.stereotype.Controller"/>
-
-        <context:exclude-filter type="annotation"
-                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
-
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
-
-    <!-- 配置数据源 -->
-    <context:property-placeholder location="classpath:db.properties"/>
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="user" value="${jdbc.user}"></property>
@@ -70,6 +65,17 @@
 
     <!-- 开启注解事务-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
+
+
+    <!-- 配置扫描Dao接口包，动态实现Dao接口并注入spring容器中 -->
+    <!-- 使用MapperScannerConfigurer是为了防止提前它初始化qlLSessionFactory，而此时可能properties文件还未加载 -->
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        &lt;!&ndash; 注入sqlSessionFactory &ndash;&gt;
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+
+        &lt;!&ndash; 给出需要扫描Dao接口包 &ndash;&gt;
+        <property name="basePackage" value="org.seckill.dao"/>
+    </bean>-->
 
     <!-- 自动注册 DefaultAnnotationHandlerMapping 与 AnnotationMethodHandlerAdapter 两个bean,
     是spring MVC为@Controllers分发请求所必须的 -->
