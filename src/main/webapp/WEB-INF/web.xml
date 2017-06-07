@@ -8,7 +8,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath*:applicationContext.xml</param-value>
+        <param-value>classpath*:spring-dao.xml</param-value>
     </context-param>
 
     <!-- 监听器作用：启动Web容器时，自动装配ApplicationContext的配置信息 -->
@@ -46,7 +46,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath*:springMVC-servlet.xml</param-value>
+            <param-value>classpath*:spring-web.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
