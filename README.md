@@ -14,4 +14,4 @@
 
 ### 思维导图
 
-![](https://github.com/Joryun/MarkdownPhotos/blob/master/shop-photos/shop.png)
+![](https://github.com/Joryun/MarkdownPhotos/blob/master/shop-photos/shop2.png)
