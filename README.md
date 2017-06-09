@@ -1,5 +1,4 @@
 网上商城系统
-
 ===========
 
 ```开发环境```：IDEA，Tomcat，MySQL
@@ -14,4 +13,4 @@
 
 ### 思维导图
 
-![](https://github.com/Joryun/MarkdownPhotos/blob/master/shop-photos/shop2.png)
+![](https://github.com/Joryun/MarkdownPhotos/blob/master/shop-photos/shop.png)
